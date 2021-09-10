@@ -4,7 +4,7 @@ const app = express();
 const router = require('./router/router');
 
 
-
+require('dotenv').config();
 // ==> spy bisa input username-password JWT di POSTMAN, show JSON
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json()); 

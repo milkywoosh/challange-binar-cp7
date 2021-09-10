@@ -2,7 +2,7 @@
   "name": "trial_jwt",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "nodemon server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -17,7 +17,12 @@
     "express-flash": "0.0.2",
     "express-session": "^1.17.2",
     "jsonwebtoken": "^8.5.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
