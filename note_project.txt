@@ -1,0 +1,26 @@
+npm install sequelize 
+sequelize init  --> generate several files and folder
+set config .env
+
+export PATH=/Library/PostgreSQL/12/bin:$PATH
+
+USER: admin_lukman as SUPERUSER
+PASS: lukman123
+check every user in POSTGRES ---> \du+
+
+db: db_jwt
+
+
+======  PERLU PERBAIKAN DI SERVER: -ADD SEVERAL LINE OF CODE (SEE PAGE 17)!!!!  =======
+
+
+
++ npx blabla will generate model and migration
+npx sequelize-cli model:generate --name User --attributes username:string,password:string
+
++ create migration: -auto create/define table
+sequelize migration:create --name User_Definition
+
+
+
+https://www.tutorialsteacher.com/nodejs/nodejs-module-exports

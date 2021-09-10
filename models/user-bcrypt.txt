@@ -1,0 +1,44 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
+
+const bcrypt = require('bcrypt');
+
+module.exports = (sequelize, DataTypes) => {
+  class User extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+
+    // still inside class
+    // in OOP '#' sign as 'private',  #properties --> private, only accessible inside this class, CANNOT for sub-class!!!
+    static #encrypt = (password) => bcrypt.hashSync(password, 10) // static method
+    // method untuk register: daftar username & password ke database
+    static register = ({username, password}) => {
+      const encryptedPassword = this.#encrypt(password)
+      // const encryptedPassword = bcrypt.hashSync(password, 10)
+      // console.log(encryptedPassword) 
+      /*
+          notes: #encrypt dari static method
+                  encryptedPassword akan sama dgn string
+                  hasil enkripsi password dari method #encrypt
+      */
+      return User.create({ username, password: encryptedPassword });
+    }
+  };
+
+  User.init({
+    username: DataTypes.STRING,
+    password: DataTypes.STRING
+  }, {
+    sequelize,
+    modelName: 'User',
+  });
+  return User;
+};
