@@ -1,16 +1,7 @@
 // watchout when importing !
 const { User } = require('../models');
-// const passport = require('passport');
 
 
-// function format(idk) {
-//     const { id, username } = idk
-//     return {
-//         id,
-//         username,
-//         accessToken: idk.generateToken()
-//     }
-// }
 
 module.exports = {
     // register process
@@ -32,24 +23,35 @@ module.exports = {
     // login process
     login: (req, res) => {
 
+        // const currentUser = req.user;
+
         User.authenticate(req.body)
             .then(authResult => {
-                console.log(authResult)
+                // console.log(authResult)
                 // res.json(
                 //     format(authResult)
                 // )
+
                 const { id, username } = authResult
                 const data = {
                     id,
                     username,
                     token: authResult.generateToken()
                 }
-                res.send(data)
 
+                // res.redirect(`/api/homepage/${authResult.username}`);
+                res.send({ message: data });
             })
             .catch(err => {
-                res.send({message: err.message});
+                // res.send({ messagessss: er   r.message });
+                res.redirect('/api/homepage');
+
+
             })
-            
-    }
+
+    },
+
+
+
+
 }

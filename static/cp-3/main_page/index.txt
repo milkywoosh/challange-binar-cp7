@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+  <!-- separated css file -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- font style -->
+
+
+
+
+  <script type="text/javascript" src="./javascript.js" async></script>
+
+  </head>
+
+
+  <body>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+
+
+    <!-- navbar navbar-expand-sm bg-dark navbar-dark -->
+    <section>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top transparent py-4">
+        <a class="navbar-brand" id="navbar_left" href="#">LOGO</a>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">WORK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT ME</a>
+            </li>
+          </ul>
+
+
+
+          <ul id="navbar_right" class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link" href="#">SIGN UP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <section>
+      <div class=" background1  justify-content-center   ">
+        <div>
+          <h1 class="main-header-text">PLAY TRADITIONAL GAME</h1>
+          <p class=" second-header-text  "> Experience new traditional game play</p>
+
+          <button id="button-home" class="btn-warning"> PLAY NOW </button>
+        </div>
+
+        <div>
+          <p class="story-text">THE STORY</p>
+
+          <button class="button-position">
+            &#9660;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class=" background2 align-items-center   ">
+        <div id="the-game" class="align-text-top">
+          <div class="justify-content-center d-flex" style="font-size: 25px">
+            what's so special ?
+          </div>
+          <div class="justify-content-center d-flex" style="font-size: 50px; font-family: arial; font-style: normal">
+            THE GAMES
+          </div>
+        </div>
+        <!-- auto slide carousel -->
+        <div id="triple-game">
+          <!-- class="carousel-positioning" -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/rockpaperstrategy-1600.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/rock_paper_scissors_2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/rock-paper-scissors-neon-3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon  left-arrow" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon right-arrow" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <div class=" background3  container-fluid  align-items-right ">
+
+      <!-- grid mode -->
+      <div class="features" style="color: white; font-family: Arial; padding-left: 300px; padding-bottom: 300px;">
+
+        <div class="col">
+          <!-- empty grid -->
+        </div>
+        <div class="col">
+          <p style="font-size: 18px;"> What's so special?</p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <!-- empty grid -->
+        </div>
+        <div class="col">
+          <p style="font-size: 50px;"> FEATURES </p>
+        </div>
+        <div class="w-100"></div>
+        <!-- border -->
+        <div class="col">
+          <!-- empty grid -->
+        </div>
+        <div class="col">
+          <!-- COLOR: #FFB548; -->
+          <p style="font-size: 24px; color: #bf7403;"> <span style="color: white"> &#9675; </span> TRADITIONAL GAMES
+            <br>
+          </p>
+          <p style="letter-spacing: 3px;"> if you miss your childhood, we provide <br> many traditional games here</p>
+          <p style="font-size: 24px; color: #bf7403;"> <span style="color: white"> &#9675; </span> GAME SUIT</p>
+          <p style="font-size: 24px; color: #bf7403;"> <span style="color: white"> &#9675; </span> TBD</p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <!-- empty grid -->
+        </div>
+
+
+      </div>
+    </div>
+
+    </div>
+
+    <div class=" background4 container-fluid  justify-content-center  bg-dark text-center ">
+      <div class="container" style="color: white;  margin-left:130px; font-family: Arial; ">
+        <div class="row" style="text-align: left; padding-bottom: 0px; line-height: 70px ;">
+          <div class="col-lg-4 col-sm-6" style="font-size: 56px;">
+            SYSTEM
+          </div>
+          <div class="col-lg-4  col-sm-6">
+            Can My Computer Run This Game?
+          </div>
+          <div class="col-lg-4  col-sm-6">
+
+          </div>
+          <div class="col-lg-6   col-sm-6" style="font-size: 56px;">
+            REQUIREMENTS
+          </div>
+        </div>
+
+        <div style="line-height: 20px;">
+          <div class="row" style="text-align: left; padding-bottom: 50px;">
+            <div class="col-6"> <br> </div>
+            <div class="col-6"> <br></div>
+          </div>
+          <div class="row" style="border-top: 1px solid rgba(201, 197, 197, 0.94); 
+                border-left: 1px solid rgba(201, 197, 197, 0.94); 
+                border-right: 1px solid rgba(201, 197, 197, 0.94); 
+                text-align: left; 
+                padding-top: 0px; 
+                width: 50%;
+                height: 100px ;
+                ">
+            <div class="col-6" style="border-right: 1px solid rgba(201, 197, 197, 0.94); 
+                  padding-top: 10px; line-height: 20px;">
+              <p> <span style="font-size: 20px; color: #bf7403;">OS:</span> <br>
+                Windows 7 64-bit only (No OSX support at this time)
+              </p>
+
+            </div>
+            <div class="col-6" style=" padding-top: 10px;">
+              <p> <span style="font-size: 20px; color: #bf7403;"> PROCESSOR:</span> <br>
+                Intel Core 2 @2.4 GHZ or AMD athlon X2 @ 2.8 GHZ
+              </p>
+            </div>
+          </div>
+          <div class="row" style="border-top: 1px solid rgba(201, 197, 197, 0.94); 
+                  border-left: 1px solid rgba(201, 197, 197, 0.94); 
+                  border-right: 1px solid rgba(201, 197, 197, 0.94); 
+                  text-align: left; 
+                  padding-bottom: 0px; 
+                  line-height: 35px;
+                  width: 50%;">
+            <div class="col-6" style="border-right: 1px solid rgba(201, 197, 197, 0.94); ">
+              <p> <span style="font-size: 20px; color: #bf7403;">mEMORY:</span> <br>
+                4 GB RAM</p>
+            </div>
+            <div class="col-6" >
+              <p> <span style="font-size: 20px; color: #bf7403;">storage:</span> <br>
+                8 GB available space
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="border-top: 1px solid rgba(201, 197, 197, 0.94); 
+                  border-bottom: 1px solid rgba(201, 197, 197, 0.94); 
+                  border-left: 1px solid rgba(201, 197, 197, 0.94); 
+                  border-right: 1px solid rgba(201, 197, 197, 0.94); 
+                  text-align: left; 
+                  padding-bottom: 0px; 
+                  line-height: 35px;  
+                  width: 50%;">
+            <div class="col-12" >
+              <p> <span style="font-size: 20px; color: #bf7403;">GRAPHICS:</span> <br>
+                NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+      <div class=" background5 container-fluid    justify-content-center align-items-center ">
+
+        <div  class= "col" style="margin-left: 100px; margin-top: 70px;">
+            <section style="color:rgba(201, 197, 197, 0.94);">
+              <div style="text-align: left;  ">
+                  <p style="font-size: 40px; letter-spacing: 3px;">TOP SCORES</p>
+                  <p style="font-size: 18px;  ">This top score from various games provided on this platform</p>
+                  <button style="font-weight: 500; padding-left: 70px; padding-right: 70px; border-radius: 4px;" class="btn-warning"> see more </button>
+              </div>
+            </section> 
+        </div>
+
+        <div style="margin-top: 70px; margin-right: 100px; border-radius: 10px;">
+          <div style=" color:rgba(201, 197, 197, 0.94); ">
+            <div class="card" style="height: 9rem; width: 25rem; margin-left: 500px; margin-top: 10px; background-color: rgb(42, 42, 42);">
+              <div class="card-body">
+                <h5 class="card-title color-card-name"> Evan Lahti </h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: small;">PC Gamer</h6>
+                <p class="card-text">"One of my gaming highlight of the year."</p>
+                <p style="font-size: small;">  October 18, 2018</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div style=" color:rgba(201, 197, 197, 0.94); ">
+            <div class="card" style="height: 170px; width: 25rem; margin-left: 300px; margin-top: 10px; background-color: rgb(42, 42, 42);">
+              <div class="card-body" style="line-height: 20px;">
+                <h5 class="card-title color-card-name">Jada Griffin</h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: small;">Nerdreactor </h6>
+                <p class="card-text">“The next big thing in the world of streaming and survival games.” </p>
+                <p style="font-size: small;">  October 18, 2018</p>
+              </div>
+            </div>
+          </div>
+          <div style=" color:rgba(201, 197, 197, 0.94); ">
+            <div class="card" style="height: 11rem; width: 25rem; margin-left: 380px; margin-top: 10px; background-color: rgb(42, 42, 42);">
+              <div class="card-body">
+                <h5 class="card-title color-card-name"> Aaron Williams </h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: small;">Uproxx</h6>
+                <p class="card-text">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”</p>
+                <p style="font-size: small;">  December 24, 2018</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" background6 container-fluid align-items-left" >
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <img src="../assets/skull-head.png" id="img-6" >
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="container" >
+          <div class="row"  >
+            <div class="col" style="padding-top: 2px; color: white;">
+             Want to stay in touch?
+            </div>
+            <div class="w-100"></div>
+            <div class="col" style="line-height: 10px; padding-top: 2px; color: white;">
+              <h1>NEWSLETTER <br> SUBSCRIBE </h1>
+
+            </div>
+            <div class="w-100"></div>
+
+            <div>
+              <form >
+                <input class="form-subscribe" type="text" id="fname" name="firstname" placeholder="your email ">
+              </form>
+            </div>
+            <div class="col ">
+              <button class=" btn-warning button-subscribe"> Subscribe now</button>
+              
+            </div>
+            
+          </div>
+        </div>
+
+
+
+      </div>
+    
+
+    
+
+
+
+    <!-- Footer -->
+    <div class="bg-footer" >
+      <div class="container"style="margin-bottom: 50px; ">
+        <div class="row" style="font-size: 7px; text-align: center; line-height:50px;">
+
+      
+          <div class="col pointer-finger">MAIN</div> 
+          <div class="col pointer-finger">ABOUT</div>
+          <div class="col pointer-finger">GAME FEATURES</div>
+          <div class="col pointer-finger">SYSTEM REQUIREMENTS</div>
+          <div class="col pointer-finger">QUOTES</div>
+          <div class="col pointer-finger">
+            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65382 19.1726H2.56282V9.67859H0.517822V6.40559H2.56282V4.44159C2.56282 1.77259 3.71782 0.183594 6.99582 0.183594H9.72582V3.45659H8.02082C6.74282 3.45659 6.65882 3.91459 6.65882 4.76859L6.65382 6.40559H9.74582L9.38382 9.67859H6.65382V19.1726Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="col pointer-finger" style="color: white;">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2138 2.42967C20.4408 2.75167 19.6098 2.96667 18.7388 3.06467C19.6288 2.56467 20.3118 1.77267 20.6338 0.830668C19.7998 1.29267 18.8778 1.62867 17.8958 1.81067C17.1108 1.02467 15.9898 0.534668 14.7508 0.534668C12.3708 0.534668 10.4398 2.34367 10.4398 4.57367C10.4398 4.89067 10.4778 5.19967 10.5518 5.49467C6.96981 5.32567 3.79381 3.71767 1.66781 1.27467C1.29681 1.87167 1.08481 2.56467 1.08481 3.30567C1.08481 4.70567 1.84581 5.94367 3.00181 6.66767C2.29581 6.64567 1.63181 6.46467 1.04981 6.16167C1.04981 6.17967 1.04981 6.19467 1.04981 6.21367C1.04981 8.17067 2.53481 9.80267 4.50681 10.1737C4.14581 10.2657 3.76381 10.3137 3.37181 10.3137C3.09381 10.3137 2.82381 10.2897 2.56081 10.2437C3.10881 11.8467 4.70081 13.0157 6.58681 13.0487C5.11181 14.1317 3.25381 14.7767 1.23381 14.7767C0.885811 14.7767 0.542811 14.7577 0.205811 14.7207C2.11281 15.8657 4.37881 16.5357 6.81281 16.5357C14.7408 16.5357 19.0758 10.3797 19.0758 5.04267C19.0758 4.86667 19.0708 4.69367 19.0628 4.51967C19.9048 3.94967 20.6358 3.23867 21.2138 2.42967Z" fill="white"/>
+              </svg>
+              
+          </div>
+          <div class="col pointer-finger">
+            <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.61 0.183594H5.98961C3.12627 0.183594 0.799805 2.55085 0.799805 5.4644V12.8973C0.799805 15.8163 3.12627 18.1781 5.98961 18.1781H20.6046C23.4733 18.1781 25.7944 15.8108 25.7944 12.8973V5.4644C25.7998 2.55085 23.4733 0.183594 20.61 0.183594ZM17.0959 9.54779L10.2575 12.8642C10.0731 12.9524 9.86705 12.82 9.86705 12.6103V5.7679C9.86705 5.55821 10.084 5.42578 10.2629 5.51958L17.1013 9.04564C17.3074 9.15048 17.302 9.44846 17.0959 9.54779Z" fill="#FF1313"/>
+              </svg>              
+          </div>
+          <div class="col pointer-finger">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9602 13.6252V9.5538V0.680176H2.93894L0.811279 2.97688V15.0868H6.13043V18.845H8.47085L11.024 16.1307H17.407L19.9602 13.6252ZM7.40694 13.4165H4.00268C3.76864 13.4165 3.57715 13.2286 3.57715 12.9989V2.76817C3.57715 2.5385 3.76864 2.35059 4.00268 2.35059H17.6197C17.8537 2.35059 18.0452 2.5385 18.0452 2.76817V10.7022C18.0452 10.8171 18.0027 10.9215 17.9229 10.9998L15.5825 13.2965C15.5027 13.3748 15.391 13.4165 15.2793 13.4165H11.3697L8.07183 15.6401C8.00268 15.6871 7.91757 15.7132 7.83247 15.7132C7.76332 15.7132 7.69949 15.6976 7.63566 15.6662C7.49204 15.5932 7.40694 15.4522 7.40694 15.2956V13.4165Z" fill="white"/>
+              <path d="M13.79 9.76274V5.58691H12.0878V9.76274H13.79ZM9.53465 9.76274V5.58691H7.83252V9.76274H9.53465Z" fill="white"/>
+              </svg>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 pointer-finger" 
+            style="border-top: 1px solid white;
+                   text-align: left;
+                   color: rgb(80, 80, 80);
+                   "> © 2018 Your Games, Inc. All Rights Reserved</div>
+          <div class="col-6 " 
+            style="border-top: 1px solid white;
+                  text-align: right;
+                  ">
+                  <a class= "pointer-finger" style="color: aliceblue;">Privacy Policy |</a>  
+                  <a class= "pointer-finger" style="color: aliceblue;">Terms of Services |</a>
+                  <a class= "pointer-finger" style="color: aliceblue;">Code of Conduct</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

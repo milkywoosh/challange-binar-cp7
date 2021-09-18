@@ -1,0 +1,65 @@
+BOOTRAP 5: reason, based on several information on the internet this has been a stable version
+
+
+figma design: 
+https://www.figma.com/file/njjynWhBsR33SA6YReviGS/ Binar-challenge-FW-C4?node-id=0%3A1
+
+reference: 
+
+- next:
+    -randomin background abu-abu tiap item saat click mulai
+    -tambahin proses refresh
+    -add WIN LOSE DRAW resul at center
+    -ketentuan pakai OOP paradigm
+    -ketentuan pakai bootstrap
+    -setelah selesai game suit tidak bisa di-click, atau ubah state "true" to "false"
+
+
+bstrap 5:
+    centering object
+    - h-100 
+    - d-flex
+    - justify-content-center
+    - align-items-center
+
+
+copy lineof code: shift + option + down;
+
+
+referensi = https://gitlab.com/priambudi/test-git-binar/-/tree/master/
+
+
+-add classList 
+element.classList.add("mystyle");
+
+
+problem EXPORT MODULE: https://kotakode.com/pertanyaan/9851/SyntaxError%3A-Cannot-use-import-statement-outside-a-module
+
+
+
+last update: 15 juli:
+    - process on creating active grey background after addEventListener("click");
+    - import - export class and function with  ES6 style, module among file in directory
+
+    NEXT TODO: - Set Winner-Lose-Draw result on screen!
+               - set refresh page and SET "VS" state on the center
+               -
+
+
+
+- agar CLASS dapat berada barengan dgn DOCUMENT.GETLEMENTBYID()
+dan WEB dapat di-load dengan baik, PERLU PAKAI LIVE-SERVER port: 5500
+
+
+>  WIDTH AND HEIGHT in SVG
+- untuk merubah dimensi width and height dari SVG, maka dapat langsung diubah dari 
+    attribute WITDH and HEIGHT di file svg-nya sendiri untuk menyesuaikan
+    -- pendekatan pertama dpt menggunakan PNG untuk penyesuaian awal WIDTH and HEIGHT ---
+
+    <rect width="128" height="120" fill="url(#pattern0)"/>
+    
+    kemudian dimensi tersebut langsung diimplementasi ke Width and Height-nyaS
+
+
+
+- same reference for rotating image: https://techstacker.com/how-to-rotate-images-continuously-with-css-animations/

@@ -1,0 +1,24 @@
+{
+  "name": "taskbinar4",
+  "version": "1.0.0",
+  "description": "exercise",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milkywoosh/binar_challange_chapter4.git"
+  },
+  "keywords": [
+    "latihan",
+    "class"
+  ],
+  "author": "lkm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milkywoosh/binar_challange_chapter4/issues"
+  },
+  "homepage": "https://github.com/milkywoosh/binar_challange_chapter4#readme"
+}

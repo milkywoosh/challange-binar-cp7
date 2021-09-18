@@ -1,0 +1,219 @@
+.stone {
+    
+    width: 128px;
+    height: 120px;
+}
+
+.scissor {
+    width: 134px;
+    height: 140px;
+    /* overflow: visible; */
+
+    /* percobaan 1 */
+    /* width: 100%;
+    height: 50%; */
+}
+
+.paper {
+    width: 115px;
+    height: 150px;
+}
+
+
+.refresh-button {
+    width: 70px;
+    height: 80px;
+}
+
+.border-between {
+    padding-top: 20px;
+}
+
+.player-com {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    width: 192px;
+   
+    display: block;
+    text-align: center;
+    padding-bottom: 2px;
+
+    width: 192px;
+    display: block;
+  
+}
+
+/* randoming */
+ .bg-item-suit {
+    
+    width: 192px;
+    height: 149x;
+    /* if playing set background with  #C4C4C4*/
+    
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+} 
+
+.set-bg-grey {
+    background: #C4C4C4;
+}
+
+.bg-item-center {
+    width: 240.11px;
+    height: 149px;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+}
+
+.bg-button-refresh {
+    width: 270.11px;
+    height: 149px;
+    text-align: center;
+    padding-top: 150px;
+}
+
+
+.left-space {
+    /* padding-left: 50px; */
+}
+
+.sub_title {
+    width: 600px; /* the bigger the font, the wider it needs */
+    height: 50px;
+    /* left: 218px;
+    top: 40px; */
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    /* line-height: 49px; */
+    text-align:left;
+   
+
+    color: #F9B23D;
+}
+
+.less_than {
+    font-family: Open Sans;
+    width: 600px; /* the bigger the font, the wider it needs */
+    /* height: 50px; */
+    /* letter-spacing: 0.1em; */
+    /* text-transform: uppercase; */
+    text-align:left;
+
+    color: #724C21;
+}
+
+/* state before click which show VS typing */
+.vs-frame {
+    width: 240.11px;
+    height: 149px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 144px;
+    line-height: 196px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #BD0000;
+    display: block;
+    text-align: center;
+}
+
+/* state after click which show P1 or COM win */
+.not_draw_result {
+    width: 250px;
+    height: 166.93px;
+    background: #4C9654;
+    transform: rotate(-28.87deg);
+    border-radius: 10px;
+
+
+}
+
+/* state after click which show DRAW result */
+.draw_result {
+    width: 250px;
+    height: 166.93px;
+    background: #035B0C;
+    transform: rotate(-28.87deg);
+    border-radius: 10px;
+}
+.text_result {
+
+    padding-top: 40px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transform: rotate(-30.98deg);
+}
+
+/* rotating refresh button */
+
+.rotate {
+    animation: rotation 0.8s;
+}
+  
+.linear {
+    animation-timing-function: linear;
+}
+
+.infinite {
+    animation-iteration-count: infinite;
+  }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+
+.poppingUp {
+    background-color: rgb(224, 228, 8);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    color: #000000;
+    font-size: 40px;
+    top:"300";
+    left:"500";
+    text-align: center;
+}
+
+.ref-dimension {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/* rotating image refresh for POP UP WINDOWWW */
+.rotate-imagePopUp {
+    animation: rotation 1s linear infinite;
+  }
+
+
+.bg-popup {
+    /* background-color: #BD0000; */
+    background-image:  linear-gradient(to right, red, red 14.3%, orange 14.3%, orange 28.6%, yellow 28.6%, yellow 42.9%, green 42.9%, green 57.2%, blue 57.2%, blue 71.5%, indigo 71.5%, indigo 85.8%, violet 85.8%, violet);
+}

@@ -2,9 +2,11 @@ const { urlencoded } = require('express');
 const express = require('express');
 const app = express();
 const router = require('./router/router');
+const authRouter = require('./router/authRouter');
 
-
-require('dotenv').config();
+const {passportAdmin, passportPlayer} = require('./lib/passport')
+app.use(passportAdmin.initialize())
+app.use(passportPlayer.initialize())
 // ==> spy bisa input username-password JWT di POSTMAN, show JSON
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json()); 
@@ -20,6 +22,7 @@ db.sequelize.sync(NEVER_CHANGE); // if true: overwrite the data table every NPM 
 
 app.set('view engine', 'ejs');
 app.use(router);
+app.use(authRouter);
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`listening to port ${PORT}`);

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS file style -->
+    <link href="style.css" rel="stylesheet">
+    <title>Hello, world!</title>
+    <script type= "module" src="./engineJs.js" ></script>
+   
+</head>
+
+<body style="background-color: #9C835F;">
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    
+        <!-- -->
+        <div class="d-flex flex-row ">
+            <div class=" p-2 justify-content-start ">  <span class=" less-than" style="font-size: 60px; font-weight: bold;" >&lt;</span>  </div>
+            <div class=" p-2 justify-content-start"> <img src="./assets/logo-traditional-suit.png"> </div>
+            <div class=" p-2 sub_title justify-content-start"> ROCK PAPER SCISSORS </div>
+        </div>
+        
+
+    <div>
+
+        <div class="d-flex flex-row bd-highlight justify-content-evenly left-space" style="padding-top: 0px;">
+            <div  class=" player-com ">
+                PLAYER
+            </div>
+            <div class="player-com ">
+                <span>   </span>
+            </div>
+            <div  class=" player-com ">
+                COM
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
+            <div  id="batu-player1" 
+                  class="bg-item-suit  justify-content-evenly" 
+                  style="padding-top: 30px;"
+                  >
+                  <!-- onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);" -->
+                <!-- player -->
+                <img src="./assets/picSVG/batu 1.svg"   class="stone" >
+
+
+
+
+            </div>
+            <div class="bg-item-center justify-content-evenly">
+                <span> </span>
+            </div>
+            <div  id="batu-com" class="bg-item-suit  justify-content-evenly " style="padding-top: 30px;"
+            >
+                <!-- com -->
+                <img src="./assets/picSVG/batu 1.svg" class="  stone" > 
+            </div>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
+            <div id="gunting-player1" class="bg-item-suit  justify-content-evenly " style="padding-top: 15px; padding-bottom: 20px;"
+            >
+                <!-- player -->
+                <img src="./assets/gunting.png" class="scissor   " >
+            </div>
+
+
+
+
+            <!-- RANDOMIZE THIS PART TO DETERMINE THE RESULT OF THE GAME : PLAYER1 WIN , COM WIN, DRAW -->
+            <div class=" justify-content-evenly">
+                <!-- PLAYER 1, COM , VS   -->
+                <div id="board-result" class= " vs-frame" style="width: 230;">
+                    vs
+                </div>
+            </div>
+
+            <div id="gunting-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px;padding-bottom: 20px;"
+            >
+                <!-- com -->
+                <img src="./assets/gunting.png" class="  scissor " >
+            </div>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
+            <div id="kertas-player1" class="bg-item-suit  justify-content-evenly buttonElement" style="padding-top: 15px;padding-bottom: 20px;"
+            >
+                <!-- player -->
+                <img src="./assets/kertas.png" class="  paper " >
+            </div>
+
+            <div id="refresh-game" class="bg-button-refresh justify-content-evenly">
+                <img id="rotatingRefreshButton" src="./assets/picSVG/refresh 2.svg" alt="refresh button" class=" refresh-button   linear" >
+            </div>
+
+            <div  id="kertas-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px;padding-bottom: 20px;"
+            >
+                <!-- com -->
+                <img src="./assets/kertas.png" class="  paper " >
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- used only when using onmouseover and onmouseout in tag attribute !!! -->
+    <!-- <script src="./hoveringElement.js" async></script> -->
+    
+</body>
+
+</html>

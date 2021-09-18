@@ -1,0 +1,326 @@
+
+
+
+
+@font-face {
+  font-family: DelaGothicOne-Regular;
+  src: url(../assets/Dela_Gothic_One/DelaGothicOne-Regular.ttf);
+ 
+}
+
+.bg-footer {
+  background-size: auto;
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100vw;  /* if width 100% it will only show the real dimension of the background picture */
+                 /* if width 100vw it will fully stretch the background picture and cover all page */
+   left: 0;
+  bottom: 0;
+ 
+   color: white;
+
+}
+
+.background6 {
+
+  background : url("../assets/6th-bg.jpg");    
+  background-size: cover;
+   background-position: center;
+   height: 100vh;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content: space-evenly;
+   width: 100vw;
+   align-items: center;
+   background-size: 110%;
+}
+.background5 {
+  background : url("../assets/bg-TOP-SCORE.jpg");    /* image */
+  /* background-size: cover; */
+  background-color: black;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+   background-size: 110%;
+   /* background-size: ;, background-size: 100%;, */
+  /* align-items: center; --> untuk centering all component over main-background*/ 
+  
+
+
+}
+
+.background4 {
+  width: 100%;
+  background : url("../assets/requirements.png");    /* image */
+  background-size: cover;
+   background-position: center;
+   filter: brightness(180%);
+   height: 100vh;
+   background-repeat: no-repeat;
+   display: flex;
+   width: 100vw;
+   /* align-items: center; */
+}
+
+
+.background3 {
+   background : url("../assets/features.jpg");    /* image */
+   background-size: cover;
+   background-position: center;
+   filter: brightness(180%);
+   height: 100vh;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content: space-evenly;
+   width: 100vw;
+   align-items: center;
+  
+}
+
+.background2 {
+  width: 100%;
+  background : url("../assets/the-games-bg.jpg");    /* image */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(140%);
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding-bottom: 10%;
+  align-items: center;
+}
+
+
+.background1 {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  background : url("../assets/main-bg.jpg");    /* image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  width: 100vw;
+  position: relative;
+  /* align-items: center; */
+}
+
+
+
+img {
+  height: 400px;
+  width: 600px;
+
+}
+
+
+
+
+
+.carousel-indicators [data-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+
+
+/*  */
+#triple-game {
+  height: 200px;
+  width: 750px;
+} 
+
+
+
+
+
+/* play traditional game */
+.main-header-text {
+  /* display: flex; */
+
+
+  margin-top: 40%;
+  /* position: */
+  text-align:center;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 3px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+/* Experience new trad game play */
+.second-header-text {
+  text-align: center;
+  color: white;
+  font-size: larger;
+  margin-top: 20px;
+  left: 10%;
+  /* position: absolute; */
+  letter-spacing: 4px;
+}
+
+#button-home {
+  font-size: small;
+  font-weight: bolder;
+
+  margin-top: 10%;
+  margin-left: 35%;
+  /* text-align: center; */
+  padding: 15px 20px;
+  border-radius: 4px; 
+  width: 200px;
+  cursor: pointer;
+}
+
+.story-text {
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size:    12px;
+  left: 46%; 
+  bottom: 4%;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: aliceblue;
+}
+
+
+.button-position {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  left: 47%; 
+  bottom: 3%;
+  /* line-height: 22px; */
+  text-transform: uppercase;
+  color: black;
+}
+
+.container__triangle--down {
+  border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+  width: 10px;
+}
+
+.features {
+  margin-top: 100px;
+  margin-left: 200px
+}
+
+/* Create two equal columns that floats next to each other */
+.column-bg-5 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  
+}
+
+/* Clear floats after the columns */
+.row-bg-5 {
+  content: "";
+  display: table;
+  clear: both;
+ 
+}
+
+#the-game {
+
+  width: 30%;
+  color: aliceblue;
+  font-size: larger;
+  align-items: flex-end;
+}
+
+
+.transparent {
+  background: rgba(0, 0, 0, 0.482);
+}
+
+
+.navbar-nav > li{
+  padding-left:15px;
+  padding-right:15px;
+}
+
+
+#navbar_left {
+  padding-left: 90px;
+  padding-right: 150px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+#navbar_right {
+  padding-left:150px;
+  padding-right:100px;
+}
+
+
+.color-card-name {
+  color: #d29539;
+}
+
+.pointer-finger {
+  cursor: pointer;
+}
+
+#img-6 {
+  width: 300px;
+  height: 500px;
+  margin-top: 80px;
+  margin-left: 120px;
+}
+
+.button-subscribe {
+  font-size: small;
+  font-weight: bolder;
+  padding: 15px 20px;
+  border-radius: 4px; 
+  /* background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%); */
+  width: 200px;
+  cursor: pointer;
+
+}
+.form-subscribe {
+  font-size: small;
+  font-weight: bolder;
+  padding: 15px 20px;
+  border-radius: 4px; 
+  /* background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%); */
+  width: 200px;
+  color: rgb(55, 55, 57);
+}
+
+.top-score-tes {
+    position: fixed;
+    padding: 2em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px; 
+    letter-spacing: 3px;
+}
+
+.various-score-tes {
+
+    position: fixed;
+    padding: 2em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+}

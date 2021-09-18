@@ -2,14 +2,15 @@
   "name": "trial_jwt",
   "version": "1.0.0",
   "description": "",
-  "main": "nodemon server.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "lkm",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.4",
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",

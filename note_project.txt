@@ -8,7 +8,7 @@ USER: admin_lukman as SUPERUSER
 PASS: lukman123
 check every user in POSTGRES ---> \du+
 
-db: db_jwt
+db: db_jwtdd
 
 
 ======  PERLU PERBAIKAN DI SERVER: -ADD SEVERAL LINE OF CODE (SEE PAGE 17)!!!!  =======
@@ -16,7 +16,12 @@ db: db_jwt
 
 
 + npx blabla will generate model and migration
+// User
 npx sequelize-cli model:generate --name User --attributes username:string,password:string
+// Room
+npx sequelize-cli model:generate --name Room --attributes name:string
+// User History
+npx sequelize-cli model:generate --name History --attributes player_id:integer,room_id:integer,result:integer
 
 + create migration: -auto create/define table
 sequelize migration:create --name User_Definition
@@ -24,3 +29,90 @@ sequelize migration:create --name User_Definition
 
 
 https://www.tutorialsteacher.com/nodejs/nodejs-module-exports
+
+UTAMAKAN PAKAI POSTMAN UNTUK HIT ENDPOINT
+
+
+there are three roles:
+                    1. admin: only see dashboard
+                    2. player: only play game
+                    3. superuser: can do all
+
+
+
+
+
+
+
+
+
+
++ = = = = =  =======      NOTE CHAPTER 6      === = = = = = = = = = =  = = = == = = = = = = = = = = = = = = = == =
+
+npm install sequelize 
+sequelize init
+set config .env
+
+
++ npx blabla will generate model and migration
+npx sequelize-cli model:generate --name UserGame --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserBiodata  --attributes fname:string,lname:string,age:integer
+npx sequelize-cli model:generate --name UserHistoriGame  --attributes score:integer,usernameID:integer
+
+https://www.tutorialsteacher.com/nodejs/nodejs-module-exports
+
+
+
+// queryInterface add foreign key 
+https://stackoverflow.com/questions/29904939/writing-migrations-with-foreign-keys-using-sequelizejs
+
+//penjelasan alter-table-userGameBio 
+    ada di FD 5 24 Agus 00:40:51
+
+    sequelize migration:create --name altertable-userhistorigame
+
+
+https://stackoverflow.com/questions/65380030/association-in-sequelize
+
+db.usergame = require('./models').Usergame(sequelize, Sequelize);
+db.userbiodata = require('./models').Userbiodata(sequelize, Sequelize);
+
+
+table migration name must be use "S" ??
+
+https://towardsdatascience.com/version-control-your-database-part-1-creating-migrations-and-seeding-992d86c90170
+
+db.sequelize.sync({}) --> to see the logging query, go to config-> set logging: true
+
+
+some reference: -> class form sequelize define
+https://gist.github.com/vapurrmaid/a111bf3fc0224751cb2f76532aac2465
+
+
+be carefull saat set db.sync(force: true) --->> 
+---> akan merubah setup MIGRATION
+--> efek, mengubah status FOREIGN KEY menjadi tidak related
+solusi????  -> https://stackoverflow.com/questions/56213758/on-delete-cascade-for-multiple-foreign-keys-with-sequelize
+
+
+ {
+          foreignKey: {name: 'id', allowNull: false},
+          onDelete: 'cascade',
+          hooks: true
+        }
+
+
+
+INSERT INTO "UserGames" (username, password, createdAt, updatedAt) VALUES ('beni123', 'aaa', '1996-12-02', '2020-01-01' );
+
+INSERT INTO table_name (score, username_player)
+VALUES (100, 'beni123);
+
+
+select UserGames.username,
+    UserHistories.score,
+    UserHistories.usernameID
+from "UserHistories"
+    left join "UserGames"
+on UserGames.id = UserHistories.usernameID;
+

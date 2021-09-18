@@ -1,3 +1,4 @@
+/*
 
 function add(x) { return x * 2 };
 const cek = (a, b) => {
@@ -5,7 +6,7 @@ const cek = (a, b) => {
     return { "a": adds, "b": b }
 }
 
-console.log(cek(2,3));
+// console.log(cek(2,3));
 
 
 const express = require('expresss');
@@ -45,4 +46,8 @@ exports.anyfunc = (paramX, paramY) => {
 }
 
 const exportinggg = require('./trial')
+*/
 
+
+
+console.log( '' == false)

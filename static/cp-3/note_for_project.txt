@@ -1,0 +1,26 @@
+this project use BOOTSTRAP 4.6v
+
+- box-sizing property can make building CSS layouts easier
+
+reference: 
+    - https://www.w3schools.com/bootstrap4/
+    - https://getbootstrap.com/docs/4.0/components/navbar/. --> for nav bar reference
+
+
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top transparent py-4">
+navbar-dark: color navbar
+py-4 : width of navbar
+
+typography:
+    class: display-1, display-2 -3 -4
+
+scrolling with differenct
+
+
+- if use bootstrap, make sure use all the component bootstrap with the same version, because if not, there will be error
+
+- d-flex justify-content-center : adjust position at center spot
+
+- http://mcdlr.com/8/: use full character in CSS;
+
+- margin-top ; margin-bottom : margin-left;  --> adjusting <div> tag position 
