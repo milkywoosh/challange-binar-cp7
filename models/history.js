@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       History.belongsTo(models.Room, { foreignKey: 'room_id' });
+      History.belongsTo(models.User, { foreignKey: 'player_id'});
     }
 
     static getHistory = (id) => {
@@ -28,11 +29,19 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
 
+    static getDashboard = (id) => {
+      
+     //
+    }// static
+
   };
   History.init({
     player_id: DataTypes.INTEGER,
+    username: DataTypes.STRING,
     room_id: DataTypes.INTEGER,
-    result: DataTypes.INTEGER
+    result: DataTypes.INTEGER,
+    room_name: DataTypes.STRING
+
   }, {
     sequelize,
     modelName: 'History',
