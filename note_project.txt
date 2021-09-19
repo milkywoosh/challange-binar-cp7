@@ -36,7 +36,7 @@ UTAMAKAN PAKAI POSTMAN UNTUK HIT ENDPOINT
 there are three roles:
                     1. admin: only see dashboard
                     2. player: only play game
-                    3. superuser: can do all
+            
 
 
 
