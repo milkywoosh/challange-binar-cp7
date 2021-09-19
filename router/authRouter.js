@@ -5,7 +5,7 @@ const main_page = require('../controllers/main-apps-game/main-apps-controller');
 const { restrictPlayer, restrictAdmin } = require('../middlewares/restrict');
 
 // only access dashboard ==> role as "admin" 
-router.get('/api/auth-admin/dashboard', restrictAdmin, main_page.seeDashboard);
+router.get('/api/auth-admin/dashboard/:id_player', restrictAdmin, main_page.seeDashboard);
 router.get('/api/auth-admin/homepage/', restrictAdmin, main_page.homePageLogged)
 router.get('/api/auth-admin/whoami', restrictAdmin, main_page.whoami)
 router.post('/api/auth-admin/create-room',restrictAdmin,  main_page.createRoom)
