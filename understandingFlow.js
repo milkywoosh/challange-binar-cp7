@@ -68,10 +68,12 @@ function inputData(arr, data) {
 }
 
 let data1 = {
-    a: 0,
+    10: 0,
     b: 1,
     winner: null
 }
+
+console.log('tes: ---', parseInt(Object.keys(data1)[0]))
 let data2 = {
     a: 1,
     b: 0,
