@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     static generate = (name) => {
       return Room.create({ name });
     }
-
-
   };
   
   Room.init({
+     // column ini menentukan proses INSERT saat query database
+    // pastikan column ini ada semua di DATABASE asli
     name: DataTypes.STRING
   }, {
     sequelize,

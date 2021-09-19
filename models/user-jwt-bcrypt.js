@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
             try {
                 const user = await this.findOne({ where: { username }});
                 
-                // !!!!!!
+                // !!!
                 // gaperlu pake if {!..} karena jika terpenuhi, maka flow tidak sampe ke catch!!
                 
                 // if (!user) return  Promise.reject("User not found");
@@ -77,12 +77,11 @@ module.exports = (sequelize, DataTypes) => {
             }
         }
         //  ==========  LOGIN PROCESS ==========
-
-
-
     };
 
     User.init({
+         // column ini menentukan proses INSERT saat query database
+    // pastikan column ini ada semua di DATABASE asli
         username: DataTypes.STRING,
         password: DataTypes.STRING,
         role: DataTypes.STRING

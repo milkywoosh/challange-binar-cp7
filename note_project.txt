@@ -70,7 +70,8 @@ https://stackoverflow.com/questions/29904939/writing-migrations-with-foreign-key
     ada di FD 5 24 Agus 00:40:51
 
     sequelize migration:create --name altertable-userhistorigame
-
+    
+    sequelize migration:create --name addColumn-opponent-History-model
 
 https://stackoverflow.com/questions/65380030/association-in-sequelize
 
