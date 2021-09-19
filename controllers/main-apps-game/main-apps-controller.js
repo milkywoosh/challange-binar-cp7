@@ -35,11 +35,6 @@ module.exports = {
             .catch(err => {
                 res.send({ message: err.message });
             })
-
-        // const currentUser = req.user;
-
-
-        //    res.send(currentUser);
     },
 
     whoami: (req, res) => {
@@ -76,16 +71,18 @@ module.exports = {
             })
     },
 
-    gameSuit: (req, res, next) => {
+    gameSuit: async (req, res, next) => {
         // logic suit !!!!
         // res.render('index-cp4')
         const currentUser = req.user;
 
         if (firstMove) {
             console.log('firstmove: ', firstMove.username)
+            let firstUsername = firstMove.username;
 
             if (firstMove.id != currentUser.id) {
                 secondMove = currentUser
+                let secondUsername = secondMove.username;
                 console.log('secondMove: ', secondMove.username)
                 secondInput = req.body.option;
                 let hasilSuit = suitFunction(firstInput, secondInput);
@@ -135,7 +132,6 @@ module.exports = {
                     let tes = countingResult(tmp) // as array
                     console.log('==================>', tmp);
 
-
                     const { roomID } = req.params;
 
                     sequelize.transaction(t => {
@@ -143,13 +139,16 @@ module.exports = {
                         return History.create({
                             player_id: parseInt(Object.keys(tmp[0])[0]),
                             room_id: parseInt(roomID),
-                            result: tes[0]
+                            result: tes[0],
+                            opponent: secondUsername
+
                         }, { transaction: t })
                             .then(() => {
                                 return History.create({
                                     player_id: parseInt(Object.keys(tmp[0])[1]),
                                     room_id: parseInt(roomID),
-                                    result: tes[1]
+                                    result: tes[1],
+                                    opponent: firstUsername
                                 }, { transaction: t });
                             })
                     }).then(() => {
@@ -167,7 +166,7 @@ module.exports = {
                     res.send({ skor_sementara: storeScore });
                 }
             } else {
-                res.send({ arahan: 'sudah main, sekarang mohon tunggu giliran' })
+                res.send({ arahan: 'anda sudah main, sekarang mohon tunggu giliran' })
             }
         } else {
             firstMove = currentUser
@@ -188,9 +187,6 @@ module.exports = {
         //  {
         //      winner_id: 
         //  }
-
-
-
 
         // kalo belum ada, ubah jadi id playernya, save input player itu.
 
@@ -217,9 +213,10 @@ module.exports = {
                 player_id: id_player
             },
             attributes: [
-                'id',
+                ['id', 'id_history'],
                 'room_id',
                 'result',
+                'opponent',
                 'createdAt'
             ],
             include: {
