@@ -134,7 +134,7 @@ module.exports = {
                     }
                     let tes = countingResult(tmp) // as array
                     console.log('==================>', tmp);
-                    
+
 
                     const { roomID } = req.params;
 
@@ -204,12 +204,38 @@ module.exports = {
     },
 
     seeDashboard: (req, res, next) => {
-        const { id, username, role } = req.user;
-        res.send({
-            message: "is Authorized to see dashboard",
-            name: username,
-            role: role
-        });
-
+        // const { id, username, role } = req.user;
+        // res.send({
+        //     message: "is Authorized to see dashboard",
+        //     name: username,
+        //     role: role
+        // });
+        const { id_player } = req.params;
+        History.findAll({
+            raw: true,
+            where: {
+                player_id: id_player
+            },
+            attributes: [
+                'id',
+                'room_id',
+                'result',
+                'createdAt'
+            ],
+            include: {
+                model: User,
+                attributes: [
+                    ['id', 'player_id'],
+                    ['username', 'player_name'],
+                    'role'
+                ]
+            }
+        })
+            .then(data => {
+                res.send(data);
+            })
+            .catch(err => {
+                res.send({ message: err.message })
+            })
     }
 }
