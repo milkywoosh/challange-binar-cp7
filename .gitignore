@@ -1,3 +1,4 @@
 node_modules
 config-lkm.json
 .env
+config.js
