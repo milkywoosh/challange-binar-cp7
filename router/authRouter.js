@@ -20,7 +20,7 @@ router.get('/api/auth-player/homepage/:username', restrictPlayer, main_page.home
 // router.get('/api/refreshGame', main_page.refreshGame);
 router.get('/api/auth-player/whoami', restrictPlayer, main_page.whoami)
 router.post('/api/auth-player/create-room',restrictPlayer,  main_page.createRoom)
-router.post('/api/auth-player/fight/',restrictPlayer,  main_page.gameSuit);
+router.post('/api/auth-player/fight/:roomID',restrictPlayer,  main_page.gameSuit);
 // router.get('/api/homepage', (req, res) => res.render('index-cp3', {user: ''})); 
 
 
