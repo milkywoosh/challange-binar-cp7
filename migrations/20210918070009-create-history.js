@@ -17,6 +17,9 @@ module.exports = {
       result: {
         type: Sequelize.INTEGER
       },
+      opponent: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
