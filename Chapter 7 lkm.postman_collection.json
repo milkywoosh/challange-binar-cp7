@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "7c538b01-88fa-4d1b-94a7-8587f3e34494",
+		"name": "Chapter 7 lkm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Test data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message.email).to.eql(\"a@a.com\");",
+									"    pm.expect(jsonData.message.password).to.eql(\"aaaaa\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true,
+							"host": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJhYWEiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNjMyMDU4MzQwfQ.z1-ljQKgyzrSSklrzbtZFZ7JpZ0KB04IlVxl_GzZe54",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/api/auth-player/whoami"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Test data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message.email).to.eql(\"a@a.com\");",
+									"    pm.expect(jsonData.message.password).to.eql(\"aaaaa\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhc2QiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNjMyMDU3NTk3fQ.-SNIbQI_YKmL-4RvpkhRZNk3R_MJQMXoLU-VEvjG7f8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"kacang\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/auth-player/create-room"
+					},
+					"response": []
+				},
+				{
+					"name": "Fight - Player ID 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Test data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message.email).to.eql(\"a@a.com\");",
+									"    pm.expect(jsonData.message.password).to.eql(\"aaaaa\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhc2QiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNjMyMDU3NTk3fQ.-SNIbQI_YKmL-4RvpkhRZNk3R_MJQMXoLU-VEvjG7f8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"option\": \"batu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth-player/fight/:roomID",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth-player",
+								"fight",
+								":roomID"
+							],
+							"variable": [
+								{
+									"key": "roomID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fight - Player ID 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Test data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message.email).to.eql(\"a@a.com\");",
+									"    pm.expect(jsonData.message.password).to.eql(\"aaaaa\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJhYWEiLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNjMyMDU4MzQwfQ.z1-ljQKgyzrSSklrzbtZFZ7JpZ0KB04IlVxl_GzZe54",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"option\": \"gunting\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth-player/fight/:roomID",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth-player",
+								"fight",
+								":roomID"
+							],
+							"variable": [
+								{
+									"key": "roomID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test data\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message.email).to.eql(\"a@a.com\");",
+							"    pm.expect(jsonData.message.password).to.eql(\"aaaaa\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"aaa\",\n    \"password\": \"aaa\",\n    \"role\": \"player\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test data\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message.email).to.eql(\"a@a.com\");",
+							"    pm.expect(jsonData.message.password).to.eql(\"aaaaa\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "aaa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJhZG0iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzIwNTgxODB9.A0vdAS7CdA7ji9Es_mG2vfatqJG-NR16KVuJojLU-Do",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/auth-admin/dashboard/:id_player",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"auth-admin",
+						"dashboard",
+						":id_player"
+					],
+					"variable": [
+						{
+							"key": "id_player",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Homepage-lkm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoiYWRtIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjMxOTUxNzczfQ.8XutCf3V3cprlESi3f_PMzYc2q2mkkRIVB20AeFk6ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"adm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/auth-admin/homepage/"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
