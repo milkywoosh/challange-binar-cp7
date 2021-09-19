@@ -7,6 +7,7 @@ let firstMove = '';
 let secondMove = '';
 let firstInput = '';
 let storeScore = [];
+let tmp;
 let objs = [];
 // loadtest -c 200 --rps 100 -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJiYWdhczIiLCJpYXQiOjE2MzE1MzcwNjV9.DRxClReFBh1vEfiu-viM7l8p0zAJLFOKTxQrQnuFJ-0" http://localhost:4000/api/auth/whoami
 
@@ -42,11 +43,8 @@ module.exports = {
     },
 
     whoami: (req, res) => {
-
         const currentUser = req.user;
         const { id, username, role } = currentUser;
-
-
         History.findAll({
             where: {
                 player_id: id
@@ -85,6 +83,7 @@ module.exports = {
 
         if (firstMove) {
             console.log('firstmove: ', firstMove.username)
+
             if (firstMove.id != currentUser.id) {
                 secondMove = currentUser
                 console.log('secondMove: ', secondMove.username)
@@ -116,20 +115,16 @@ module.exports = {
                 secondInput = ''
 
                 if (storeScore.length === 3) {
-                    let tmp = storeScore;
+                    tmp = storeScore;
                     // console.log(objs)
                     function countingResult(obj) {
-                        // let result = [0, 0]
-                        let result = {
-                            win: null,
-                            lose: null,
-                        }
+                        let result = [0, 0]
 
                         let i;
                         for (i = 0; i < obj.length; i++) {
                             // console.log( 'winner ', obj[i]['winner'])
                             // console.log('Obj Keys ', parseInt(Object.keys( obj[i] )[0]))
-                            if (obj[i]['winner'] == parseInt(Object.keys( obj[i] )[0])) {
+                            if (obj[i]['winner'] == parseInt(Object.keys(obj[i])[0])) {
                                 result[0] += 1;
                             } else if (obj[i]['winner'] == parseInt(Object.keys(obj[i])[1])) {
                                 result[1] += 1;
@@ -137,11 +132,37 @@ module.exports = {
                         }
                         return result;
                     }
-                    let tes = countingResult(tmp)
-                    console.log(tes);
-                    storeScore = [];
-                    // res.send({ last_result: tmp });
-                    res.send({ last_result: tes });
+                    let tes = countingResult(tmp) // as array
+                    console.log('==================>', tmp);
+                    
+
+                    const { roomID } = req.params;
+
+                    sequelize.transaction(t => {
+                        // chain all your queries here. make sure you return them.
+                        return History.create({
+                            player_id: parseInt(Object.keys(tmp[0])[0]),
+                            room_id: parseInt(roomID),
+                            result: tes[0]
+                        }, { transaction: t })
+                            .then(() => {
+                                return History.create({
+                                    player_id: parseInt(Object.keys(tmp[0])[1]),
+                                    room_id: parseInt(roomID),
+                                    result: tes[1]
+                                }, { transaction: t });
+                            })
+                    }).then(() => {
+                        // Transaction has been committed
+                        // result is whatever the result of the promise chain returned to the transaction callback
+                        storeScore = [];
+                        res.send({ each_round: tmp, last_result: tes })
+                    }).catch(err => {
+                        // Transaction has been rolled back
+                        // err is whatever rejected the promise chain returned to the transaction callback
+                        console.log('error transaksi', err)
+                        res.send(err)
+                    });
                 } else {
                     res.send({ skor_sementara: storeScore });
                 }
